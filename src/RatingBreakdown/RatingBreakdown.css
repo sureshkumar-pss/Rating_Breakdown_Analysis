@@ -1,0 +1,112 @@
+/* src/RatingBreakdown.css */
+.rating-breakdown {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.rating-breakdown h1 {
+  font-size: 1.4rem;
+}
+.chart-container {
+  display: flex;
+  position: relative;
+  margin: 0 auto;
+}
+.x-axis-label {
+  margin-top: 10px;
+  position: absolute;
+  bottom: -35px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.x-axis-label-text {
+  margin-top: 30px;
+  font-weight: bold;
+}
+.y-axis {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 300px;
+  padding-right: 10px;
+}
+
+.y-axis-label {
+  text-align: right;
+  margin-right: 1px;
+}
+
+.y-axis-label-text {
+  position: absolute;
+  left: -75px;
+  top: 50%;
+  transform: translateY(-50%) rotate(-90deg);
+  font-weight: bold;
+}
+
+.chart {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  height: 300px;
+  border-left: 1px solid #000;
+  border-bottom: 1px solid #000;
+  padding: 10px;
+  position: relative;
+  gap: 10px;
+  margin-left: 5px;
+}
+
+.bar-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin: 0 10px; /* Adjust margin for space between bars */
+}
+
+.bar {
+  width: 40px;
+  background-color: #4caf50;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  color: #fff;
+  font-size: 12px;
+  border-radius: 5px 5px 0 0;
+  position: relative;
+}
+.bar:hover {
+  cursor: pointer;
+}
+.bar:hover .toast {
+  visibility: visible;
+  opacity: 1;
+}
+
+.toast {
+  visibility: hidden;
+  min-width: 50px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 100%; /* Position the toast above the bar */
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.regenerate-button {
+  margin-top: 14px;
+  cursor: pointer;
+  color: #4caf50;
+  border: 1px solid #4caf50;
+  border-radius: 5px;
+  padding: 5px;
+}
